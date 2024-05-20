@@ -1,4 +1,4 @@
-interface Restaurant {
+export interface Restaurant {
   id: string;
   name: string;
   image: string;
@@ -124,23 +124,47 @@ const restaurants: Restaurant[] = [
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+// https://docs.google.com/spreadsheets/d/e/2PACX-1vQkiH_igQfT2oKCZrgRA9WtXcxMLctXOIcy7fxPfC7F83-5GuaZmZe9nwSWdFNLFitqOA9gweWjKd
+
+
 const api = {
   list: async (): Promise<Restaurant[]> => {
-    await sleep(750);
+    // Obtenemos la información de Google Sheets en formato texto y la dividimos por líneas, nos saltamos la primera línea porque es el encabezado
+    const [, ...data] = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSebd7nove9C6clzj88_Q-CPsIPYwc05rd5AeW4kr9slZyvLzSi20zIbOGegS4sUPCk7LOumBZVgbjj/pub?output=csv').then(res => res.text()).then(text => text.split('\n'))
+  
+    // Convertimos cada línea en un objeto Restaurant, asegúrate de que los campos no posean `,`
+    const restaurants: Restaurant[] = data.map((row) => {
+     
+      const [id, name, description, address, score, ratings, image] = row.split(',')
+      return {
+        id,
+        name,
+        description,
+        address,
+        score: Number(score),
+        ratings: Number(ratings),
+        image
+      }
+    })
 
+    // Lo retornamos
+  
     return restaurants;
   },
   fetch: async (id: Restaurant["id"]): Promise<Restaurant> => {
-    await sleep(750);
+      await sleep(750);
 
-    const restaurant = restaurants.find((restaurant) => restaurant.id === id);
+      const restaurant = restaurants.find((restaurant) => restaurant.id === id);
 
-    if (!restaurant) {
-      throw new Error(`Restaurant with id ${id} not found`);
-    }
+      if (!restaurant) {
+        throw new Error(`Restaurant with id ${id} not found`);
+      }
 
-    return restaurant;
-  },
+      return restaurant;
+},
+
 };
 
 export default api;
+
+
