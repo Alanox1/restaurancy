@@ -5,7 +5,7 @@ import { Restaurant } from "@/api";
 export default async function RestaurantComponent({ restaurant}: { restaurant: Restaurant}) {
 
   return (
-    <article key={restaurant.id} className="bg-gray-800 p-6 shadow-md rounded-md transition duration-300 ease-in-out hover:bg-gray-700 hover:shadow-lg">
+    <article key={restaurant.id} className="bg-gray-800 p-6 shadow-md rounded-md">
           <img
               alt={restaurant.name}
               className="mb-3 h-[300px] w-full object-cover"
@@ -13,7 +13,7 @@ export default async function RestaurantComponent({ restaurant}: { restaurant: R
             />
            
             <h2 className="inline-flex gap-2 text-lg font-bold mt-2 text-white  text-center justify-evenly w-full">
-              <Link href={`/${restaurant.id}`} prefetch={false}>
+              <Link href={`/${restaurant.id}`} prefetch={false} className="hover:underline">
                 <span>{restaurant.name}</span>
               </Link>
               

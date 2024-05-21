@@ -34,9 +34,9 @@ export default async function RestaurantPage({ params: { id } }: { params: { id:
   return (
     <section>
       <RestaurantComponent restaurant={restaurant} />
-      <Link href={`/`} >
-          <p className="bg-red-500 text-center p-4 mt-8 ">Volver a inicio</p>
-      </Link>
+      <div className="flex justify-center items-center ">
+          <Link href={`/`}  className="bg-white text-black text-center p-4 mt-8 font-bold ">Volver a inicio</Link>
+      </div>
     </section>
     
   );
