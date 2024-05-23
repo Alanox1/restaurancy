@@ -1,5 +1,5 @@
 import api from "@/api";
-import RestaurantComponent from "@/components/Restaurant";
+import RestaurantComponent from "@/app/components/Restaurant";
 import Link from "next/link";
 
 

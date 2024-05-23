@@ -1,3 +1,4 @@
+
 export interface Restaurant {
   id: string;
   name: string;
@@ -124,13 +125,11 @@ const restaurants: Restaurant[] = [
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-// https://docs.google.com/spreadsheets/d/e/2PACX-1vQkiH_igQfT2oKCZrgRA9WtXcxMLctXOIcy7fxPfC7F83-5GuaZmZe9nwSWdFNLFitqOA9gweWjKd
-
 
 const api = {
   list: async (): Promise<Restaurant[]> => {
     // Obtenemos la información de Google Sheets en formato texto y la dividimos por líneas, nos saltamos la primera línea porque es el encabezado
-    const [, ...data] = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSebd7nove9C6clzj88_Q-CPsIPYwc05rd5AeW4kr9slZyvLzSi20zIbOGegS4sUPCk7LOumBZVgbjj/pub?output=csv').then(res => res.text()).then(text => text.split('\n'))
+    const [, ...data] = await fetch(`${process.env.API_URL}`,{ next: { tags: ['restaurants'] , revalidate : 100} }).then(res => res.text()).then(text => text.split('\n'))
   
     // Convertimos cada línea en un objeto Restaurant, asegúrate de que los campos no posean `,`
     const restaurants: Restaurant[] = data.map((row) => {
@@ -161,6 +160,21 @@ const api = {
       }
 
       return restaurant;
+},
+search: async (query: string): Promise<Restaurant[]> => {
+  // Obtenemos los restaurantes
+  if(query === undefined) {
+    query = ""
+  }
+  const results = await api.list().then((restaurants) =>
+    // Los filtramos por nombre
+    restaurants.filter((restaurant) =>
+      restaurant.name.toLowerCase().includes(query.toLowerCase()),
+    ),
+  );
+
+  // Los retornamos
+  return results;
 },
 
 };
