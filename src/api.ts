@@ -163,9 +163,10 @@ const api = {
 },
 search: async (query: string): Promise<Restaurant[]> => {
   // Obtenemos los restaurantes
-  // if(query === undefined) {
-  //   query = ""
-  // }
+  if(!query) {
+     query = ""
+   }
+
   const results = await api.list().then((restaurants) =>
     // Los filtramos por nombre
     restaurants.filter((restaurant) =>

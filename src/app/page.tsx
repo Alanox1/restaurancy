@@ -10,11 +10,8 @@ export default async function Home({ searchParams }: { searchParams: { q: string
 
   async function searchAction(formData: FormData) {
     "use server"
-    
-    const query = String(formData.get("query"));
-    redirect(`/?q=${query}`);
-    // redirect(`/?q=${formData.get('query')}`);
-
+  // Redirigir con el valor de query
+    redirect(`/?q=${formData.get('query')}`);
   }
 
 
