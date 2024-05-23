@@ -9,7 +9,7 @@ export default async function Home({ searchParams }: { searchParams: { q: string
   const restaurants = await api.search(searchParams.q);
 
   async function searchAction(formData: FormData) {
-    'use server'
+    "use server"
 
     // redirect(`/?q=${formData.get('query')}`);
 
