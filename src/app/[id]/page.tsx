@@ -3,10 +3,6 @@ import RestaurantComponent from "@/app/components/Restaurant";
 import Link from "next/link";
 
 
-
-// TODOS: hacer funcionar la imagen con openGraph
-//        hacer la funcion de fetch para que traiga un solo objeto de google sheet
-
 export async function generateMetadata({params: {id}}: {params: {id: string}}) {
   const restaurant = await api.fetch(id);
 
@@ -22,7 +18,7 @@ export async function generateMetadata({params: {id}}: {params: {id: string}}) {
 
 export async function generateStaticParams() {
   const restaurants = await api.list();
- 
+
   return restaurants.map((restaurant) => ({
     id: restaurant.id,
   }));
@@ -30,12 +26,12 @@ export async function generateStaticParams() {
 
 export default async function RestaurantPage({ params: { id } }: { params: { id: string } }) {
   const restaurant = await api.fetch(id);
-
+ 
   return (
-    <section>
+    <section className="w-3/4 m-auto">
       <RestaurantComponent restaurant={restaurant} />
       <div className="flex justify-center items-center ">
-          <Link href={`/`}  className="bg-white text-black text-center p-4 mt-8 font-bold ">Volver a inicio</Link>
+          <Link href={`/`}  className="bg-white text-black text-center py-3 px-6 mt-8 font-bold ">Volver a inicio</Link>
       </div>
     </section>
     

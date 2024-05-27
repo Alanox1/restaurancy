@@ -18,8 +18,8 @@ export default async function Home({ searchParams }: { searchParams: { q: string
   return (
    <section>
             <form action={searchAction} className="inline-flex gap-2 mb-4">
-                <input defaultValue={searchParams.q || ''} className="px-2 border-white border-2" name="query" placeholder="La Piazza"/>
-                <button type="submit" className="p-2 bg-white/20">Search</button>
+                <input defaultValue={searchParams.q || ''} className="px-6 border-white border-2" name="query" placeholder="La Piazza"/>
+                <button type="submit" className="p-2 px-4 bg-white/20">Search</button>
             </form>
             <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
               {restaurants.length === 0

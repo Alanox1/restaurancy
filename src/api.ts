@@ -9,7 +9,7 @@ const restaurants: Restaurant[] = [
     address: "123 Main St. Anytown USA",
     score: 4.5,
     ratings: 100,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=1",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "2",
@@ -18,7 +18,7 @@ const restaurants: Restaurant[] = [
     address: "456 Oak Ave. Anytown USA",
     score: 4.2,
     ratings: 80,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=2",
+    image: "https://images.unsplash.com/photo-1526234362653-3b75a0c07438?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "3",
@@ -28,7 +28,7 @@ const restaurants: Restaurant[] = [
     address: "789 Elm St. Anytown USA",
     score: 4.8,
     ratings: 120,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=3",
+    image: "https://images.unsplash.com/photo-1571705042748-55feda1cfadc?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "4",
@@ -37,7 +37,7 @@ const restaurants: Restaurant[] = [
     address: "101 Forest Rd. Anytown USA",
     score: 4.0,
     ratings: 60,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=4",
+    image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "5",
@@ -46,7 +46,7 @@ const restaurants: Restaurant[] = [
     address: "246 Main St. Anytown USA",
     score: 4.6,
     ratings: 90,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=5",
+    image: "https://images.unsplash.com/photo-1522336572468-97b06e8ef143?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "6",
@@ -55,7 +55,7 @@ const restaurants: Restaurant[] = [
     address: "369 Beach Blvd. Anytown USA",
     score: 4.3,
     ratings: 70,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=6",
+    image: "https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "7",
@@ -64,7 +64,7 @@ const restaurants: Restaurant[] = [
     address: "753 Maple St. Anytown USA",
     score: 4.9,
     ratings: 150,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=7",
+    image: "https://images.unsplash.com/photo-1585518419759-7fe2e0fbf8a6?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "8",
@@ -73,7 +73,7 @@ const restaurants: Restaurant[] = [
     address: "852 Oak Ave. Anytown USA",
     score: 3.9,
     ratings: 50,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=8",
+    image: "https://images.unsplash.com/photo-1586999768265-24af89630739?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "9",
@@ -83,7 +83,7 @@ const restaurants: Restaurant[] = [
     address: "963 Main St. Anytown USA",
     score: 4.7,
     ratings: 110,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=9",
+    image: "https://images.unsplash.com/photo-1485686531765-ba63b07845a7?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "10",
@@ -92,7 +92,7 @@ const restaurants: Restaurant[] = [
     address: "1479 Elm St. Anytown USA",
     score: 4.1,
     ratings: 75,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=10",
+    image: "https://images.unsplash.com/photo-1562050344-f7ad946cee35?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "11",
@@ -101,7 +101,7 @@ const restaurants: Restaurant[] = [
     address: "753 Main St. Anytown USA",
     score: 4.4,
     ratings: 65,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=11",
+    image: "https://images.unsplash.com/photo-1519690889869-e705e59f72e1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "12",
@@ -110,7 +110,7 @@ const restaurants: Restaurant[] = [
     address: "852 Oak Ave. Anytown USA",
     score: 4.9,
     ratings: 150,
-    image: "https://source.unsplash.com/480x300/?restaurant&random=12",
+    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1498&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -153,7 +153,7 @@ const api = {
       return restaurant;
 },
 search: async (query: string): Promise<Restaurant[]> => {
-  // Obtenemos los restaurantes
+  
   if(!query) {
      query = ""
    }

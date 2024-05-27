@@ -4,5 +4,5 @@ export default function Loading() {
          <p className="text-xl font-bold">Loading...</p>
      </div>
     );
-  }
+}
  
